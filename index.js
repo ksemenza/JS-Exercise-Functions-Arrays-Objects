@@ -16,7 +16,7 @@ function addNumbers(num1, num2) {
   return num1 + num2;
 }
 
-// ⭐️ Example Challenge end ⭐️
+// 01⭐️ Example Challenge end ⭐️
 
 
 // 👇 COMPLETE YOUR WORK BELOW 👇
@@ -39,9 +39,25 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+
+  this.id = id;
+  this.name = name;
+  this.email = email;
+
+  const user = {
+    id: 1,
+    name: 'Luke',
+    email: 'luke@luke.com'
+  }
+  return user;
+
 }
+
+
+
+
+
 
 /**
  * ### Challenge `getName`
@@ -56,8 +72,12 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(name) {
   /* code here */
+ name = 'Luke';
+
+  return `Hello, my name is ${name}`
+
 }
 
 /**
@@ -73,17 +93,31 @@ function getName(/* code here */) {
  *         and returns a string like `Hello, my name is {name}`.
  *         where `{name}` is the name passed into `makeSmartPerson`.
 */
-function makeSmartPerson(/* code here */) {
+function makeSmartPerson() {
   /* code here */
+ 
+
+const nameObj = {
+  name: 'Sam',
+  sum(a,b){
+    return a + b;
+  },
+  speak(){
+    return `Hello, my name is ${nameObj.name}`
+  }
+
+}
+return nameObj;
+
 }
 
 
 
 
 
-/*
-// ⭐️ Example Test Data ⭐️
 
+// ⭐️ Example Test Data ⭐️
+/*
 var inventory = [
   { id: 1, car_make: "Lincoln", car_model: "Navigator", car_year: 2009 },
   { id: 2, car_make: "Mazda", car_model: "Miata MX-5", car_year: 2001 },
@@ -100,8 +134,8 @@ var inventory = [
   { id: 13, car_make: "Chevrolet", car_model: "Cavalier", car_year: 1997 },
   { id: 14, car_make: "Dodge", car_model: "Ram Van 1500", car_year: 1999 }
   /// ... Truncated
-]
-*/
+];
+
 /**
   * ### Example Array Challenge:
   * 
@@ -135,8 +169,13 @@ function get3rdCar(inventory) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(inventory, index) {
+function getCarInfoByIndex(inventory, num) {
   /* code here */
+  const findCar = inventory.find((item,index) => {
+
+    return index === index;
+  })
+  return `This is a ${findCar.car_make} ${findCar.car_model}`
 }
 
 /**
@@ -150,8 +189,13 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
+function getLastCarInfo(inventory) {
   /* code here */
+  const getLastCar = inventory.find((item, index) => {
+    return index == inventory.length -1;
+  }
+  )
+  return `This is a ${getLastCar.car_make} ${getLastCar.car_model}`
 }
 
 /**
@@ -166,8 +210,13 @@ function getLastCarInfo(/* code here */) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
+function getCarInfoById(inventory, id) {
   /* code here */
+let carInfo = inventory.find((item, index) =>{
+  return index == index;
+})
+return `This is a ${carInfo.car_make} ${carInfo.car_model}`;
+
 }
 
 /**
@@ -178,8 +227,11 @@ function getCarInfoById(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
+function sortCarInventory(inventory) {
   /* code here */
+ modeInv = [car];
+
+ mo
 }
 
 /**
@@ -191,8 +243,10 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
+function getModelYears(model) {
   /* code here */
+
+
 }
 
 /**
